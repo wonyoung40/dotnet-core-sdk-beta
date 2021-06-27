@@ -28,7 +28,7 @@
         {
             if (null != argument)
             {
-                if (argument.expirationTimeStamp!=null) { argument.expirationTimeStampSpecified = true; }
+                if (argument.expirationTimeStamp != DateTime.MinValue) { argument.expirationTimeStampSpecified = true; }
             }
         }
 		
@@ -401,7 +401,7 @@
             {
                 if (argument.discountAmount >= 0) { argument.discountAmountSpecified = true; }
                 if (argument.taxIsAfterDiscount) { argument.taxIsAfterDiscountSpecified = true; }
-                if (null != argument.purchaseOrderDateUTC) { argument.purchaseOrderDateUTCSpecified = true; }
+                if (argument.purchaseOrderDateUTC != DateTime.MinValue) { argument.purchaseOrderDateUTCSpecified = true; }
             }
         }
         public static void orderExType(orderExType argument)
